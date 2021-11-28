@@ -1,7 +1,6 @@
 
 public class SpaceCraft {
     //Initialize values
-    // made changes
     final int GRAVITY = 9;
     int altitude;
     int fuel;
@@ -16,6 +15,7 @@ public class SpaceCraft {
         velocity = 70;
         time = 0;
         fuel = 500;
+//wed2f2q323qf
         burnRate = 0;
       
         displayValues();	
@@ -30,22 +30,27 @@ public int getBurnRate(){
     }
     
     public void calcNewValues() throws Exception{
-    	if(altitude <= 0){
-        	System.out.println("#The game is over.");
-        } else if(burnRate > fuel){
-        	throw new Exception("#Sorry, you don't have that much fuel.");
-        } else{
+else{
             //Calculate new application state
             time = time + 1;
-            altitude = altitude - velocity;
-            velocity = ((velocity + GRAVITY) * 10 -
-                    burnRate * 2) / 10;
             fuel = fuel - burnRate;
             if(altitude <= 0){
             	altitude = 0;
             }
+    	if(altitude <= 0){
+        	System.out.println("#The game is over.");
+        } else if(burnRate > fuel){
+        	throw new Exception("#Sorry, you don't have that much fuel.");
+altitude = altitude - velocity;
+            velocity = ((velocity + GRAVITY) * 10 -
+                    burnRate * 2) / 10;
+        } 
         }
     }
+
+public int getAltitude() {
+		return altitude;
+	}
     
     public void displayValues(){
     	System.out.println("Altitude: " + altitude);
@@ -63,6 +68,7 @@ public int getBurnRate(){
 	}
 
 	public int getFuel() {
+
 		return fuel;
 	}
 
@@ -76,6 +82,11 @@ public int getBurnRate(){
 
 	public void setVelocity(int velocity) {
 		this.velocity = velocity;
+	}
+
+
+public int getAltitude() {
+		return altitude;
 	}
     
 }
