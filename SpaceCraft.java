@@ -1,6 +1,7 @@
 
 public class SpaceCraft {
     //Initialize values
+    // made changes
     final int GRAVITY = 9;
     int altitude;
     int fuel;
