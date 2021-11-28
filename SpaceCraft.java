@@ -5,6 +5,7 @@ public class SpaceCraft {
     final int GRAVITY = 9;
     int altitude;
     int fuel;
+// made changes
     int velocity;
     int time;
 
@@ -12,20 +13,20 @@ public class SpaceCraft {
     
     public void init(){
     	altitude = 1000;
-        fuel = 500;
         velocity = 70;
         time = 0;
+        fuel = 500;
         burnRate = 0;
       
         displayValues();	
     }
     
-    public int getBurnRate(){
-    	return burnRate;
-    }
     
     public void setBurnRate(int br){
     	burnRate = br;
+    }
+public int getBurnRate(){
+    	return burnRate;
     }
     
     public void calcNewValues() throws Exception{
